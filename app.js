@@ -15,9 +15,9 @@ const app = Vue.createApp({
             x:0,
             y:0,
             books:[
-                {title: 'Naruto',bookauthor:'brandun'},
-                {title: 'Baruto',bookauthor:'csakc'},
-                {title: 'onepiece',bookauthor:'hsa'}
+                {title: 'Naruto',bookauthor:'brandun',img:'assets/1.jpg'},
+                {title: 'Baruto',bookauthor:'csakc',img:'assets/2.jpg'},
+                {title: 'onepiece',bookauthor:'hsa',img:'assets/3.jpg'}
             ]
         }
     }

@@ -33,6 +33,7 @@
         <div v-if="showbooks">
             <ul>
                 <li v-for="book in books">
+                    <img :src="book.img" :alt="book.title">
                     <h3>{{book.title}}</h3>
                     <p>{{book.bookauthor}}</p>
                 </li>
@@ -42,7 +43,7 @@
         <!-- attribute binding -->
 
     <a v-bind:href="url">youtube</a>
-    
+
     <!-- short hand for attribute binding -->
         <ul>
             <li v-for="url in urls">
