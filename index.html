@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue.js works</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3.0.2/dist/vue.global.js"></script>
+</head>
+<body>
+    <h1>hellow world</h1>
+    <div id="app">
+
+        <div v-if="showbooks">
+            <p>{{booktitle}} - {{author}} - {{age}}</p>
+        </div>
+
+        <!-- v-show fast and v-if,v-else slow -->
+        <button v-on:click="age++">Increase age</button>
+        <button @click="changebooktitle">changebooktitle</button>
+        <button @click="changetitle('BARUTO')">changetitle1</button>
+        <button @click="hideData">
+            <span v-if="showbooks">hideData</span>
+            <span v-else>showData</span>
+        </button>
+
+
+        
+
+        <br>
+
+        <!-- v-for looping array of objects -->
+        <div v-if="showbooks">
+            <ul>
+                <li v-for="book in books">
+                    <h3>{{book.title}}</h3>
+                    <p>{{book.bookauthor}}</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- attribute binding -->
+
+    <a v-bind:href="url">youtube</a>
+    
+    <!-- short hand for attribute binding -->
+        <ul>
+            <li v-for="url in urls">
+                <a :href="url.url1">urls</a>
+            </li>
+        </ul>
+    
+    </div>
+
+    <br>
+
+    
+
+
+
+
+
+    <br>
+
+        <!-- mouse events -->
+        <div class="box" @mouseover="handleevent($event,5)">mouseover</div>
+        <div class="box" @mouseleave="handleevent">mouseleave</div>
+        <div class="box" @dblclick="handleevent">doubleclick</div>
+        <div class="box" @mousemove="mousemove">mouseposition - {{x}} , {{y}}</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
